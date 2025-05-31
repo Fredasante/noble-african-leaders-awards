@@ -4,30 +4,37 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
 
 <url>
-  <loc>https://www.nobleleadersawardsafrica.com/</loc>
-  <lastmod>2025-03-24T21:25:38+00:00</lastmod>
+  <loc>https://www.nobleafricanleadersawards.com/</loc>
+  <lastmod>2025-05-31T18:52:33+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://www.nobleleadersawardsafrica.com/award-categories.html</loc>
-  <lastmod>2025-03-24T21:25:39+00:00</lastmod>
+  <loc>https://www.nobleafricanleadersawards.com/award-categories.html</loc>
+  <lastmod>2025-05-31T18:52:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nobleleadersawardsafrica.com/about.html</loc>
-  <lastmod>2025-03-24T21:25:39+00:00</lastmod>
+  <loc>https://www.nobleafricanleadersawards.com/about.html</loc>
+  <lastmod>2025-05-31T18:52:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nobleleadersawardsafrica.com/contact.html</loc>
-  <lastmod>2025-03-24T21:25:39+00:00</lastmod>
+  <loc>https://www.nobleafricanleadersawards.com/team.html</loc>
+  <lastmod>2025-05-31T18:52:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.nobleleadersawardsafrica.com/nominate.html</loc>
-  <lastmod>2025-03-24T21:25:39+00:00</lastmod>
+  <loc>https://www.nobleafricanleadersawards.com/contact.html</loc>
+  <lastmod>2025-05-31T18:52:34+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nobleafricanleadersawards.com/nominate.html</loc>
+  <lastmod>2025-05-31T18:52:34+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 

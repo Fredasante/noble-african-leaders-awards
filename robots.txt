@@ -1,4 +1,4 @@
 user-agent: *
 Disallow:
 
-Sitemap: https://www.nobleafricanleadersawards.com//sitemap.xml
+Sitemap: https://www.nobleafricanleadersawards.com/sitemap.xml

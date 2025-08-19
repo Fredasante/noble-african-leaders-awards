@@ -110,3 +110,27 @@
     ],
   });
 })(jQuery);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const pageUrl = encodeURIComponent(window.location.href);
+  const pageTitle = encodeURIComponent(document.title);
+
+  const fbBtn = document.getElementById("fb-share");
+  const twBtn = document.getElementById("tw-share");
+  const lnBtn = document.getElementById("ln-share");
+
+  if (fbBtn)
+    fbBtn.href = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
+  if (twBtn)
+    twBtn.href = `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`;
+  if (lnBtn)
+    lnBtn.href = `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`;
+});
+
+// Copy link function
+document.getElementById("copy-link").addEventListener("click", function () {
+  const url = window.location.href;
+  navigator.clipboard.writeText(url).then(() => {
+    alert("🔗 Link copied! You can paste it anywhere.");
+  });
+});

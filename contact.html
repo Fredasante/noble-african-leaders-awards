@@ -160,27 +160,32 @@
             </div>
           </div>
           <div class="col-xl-4 col-lg-6">
-            <form>
+            <form id="contact-form">
               <div class="row g-3">
                 <div class="col-12">
                   <input
                     type="text"
+                    name="name"
                     class="form-control border-0 bg-light px-4"
                     placeholder="Your Name"
                     style="height: 55px"
+                    required
                   />
                 </div>
                 <div class="col-12">
                   <input
                     type="email"
+                    name="email"
                     class="form-control border-0 bg-light px-4"
                     placeholder="Your Email"
                     style="height: 55px"
+                    required
                   />
                 </div>
                 <div class="col-12">
                   <input
                     type="text"
+                    name="subject"
                     class="form-control border-0 bg-light px-4"
                     placeholder="Subject"
                     style="height: 55px"
@@ -188,9 +193,11 @@
                 </div>
                 <div class="col-12">
                   <textarea
+                    name="message"
                     class="form-control border-0 bg-light px-4 py-3"
                     rows="5"
                     placeholder="Message"
+                    required
                   ></textarea>
                 </div>
                 <div class="col-12">
@@ -200,6 +207,12 @@
                 </div>
               </div>
             </form>
+
+            <!-- Status Message Area -->
+            <div id="form-status" class="mt-4"></div>
+
+            <!-- Status Message Area -->
+            <div id="form-status" class="mt-4"></div>
           </div>
           <div class="col-xl-4 col-lg-12">
             <iframe
@@ -304,6 +317,37 @@
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"
       ><i class="bi bi-arrow-up"></i
     ></a>
+
+    <script>
+      const form = document.getElementById("contact-form");
+      const status = document.getElementById("form-status");
+
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault(); // ✅ stop redirect
+
+        const data = new FormData(form);
+
+        try {
+          let res = await fetch("https://formspree.io/f/xyzpqepv", {
+            method: "POST",
+            body: data,
+            headers: { Accept: "application/json" },
+          });
+
+          if (res.ok) {
+            status.innerHTML =
+              '<div class="alert alert-success">🎉 Thank you! Your message has been sent successfully.</div>';
+            form.reset();
+          } else {
+            status.innerHTML =
+              '<div class="alert alert-danger">❌ Oops! Something went wrong. Please try again.</div>';
+          }
+        } catch (err) {
+          status.innerHTML =
+            '<div class="alert alert-warning">⚠️ Network issue. Check your connection and try again.</div>';
+        }
+      });
+    </script>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
